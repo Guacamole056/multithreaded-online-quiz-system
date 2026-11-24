@@ -1,0 +1,6 @@
+# Optional extra questions loaded at GUI start-up.
+# Format: question|option1|option2|...|correct option number (1-based)
+Which Linux command lists running processes?|ls|ps|cd|mv|2
+Which C++ container offers O(1) average lookup by key?|std::map|std::unordered_map|std::list|std::deque|2
+What does std::lock_guard do on destruction?|Locks the mutex|Unlocks the mutex|Destroys the mutex|Nothing|2
+Which of these is a mutual-exclusion primitive?|Mutex|Compiler|Linker|Debugger|1
