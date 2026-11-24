@@ -20,9 +20,11 @@ On Debian/Ubuntu: `sudo apt install build-essential cmake git libgl1-mesa-dev xo
 
 ```
 cmake -S . -B build
-cmake --build build -j
-./build/quiz_gui            # run from the project root; optional: --admins 4
-ctest --test-dir build --output-on-failure    # headless stress test
+sudo apt update
+sudo apt install wayland-protocols libwayland-dev
+cmake --build build -j$(nproc)
+./build/quiz_gui   #run from the root, --admins 4 (optional)
+ctest --test-dir build --output-on-failure
 ```
 Options: `-DQUIZ_BUILD_GUI=OFF` (core + tests only, no OpenGL needed), `-DQUIZ_BUILD_TESTS=OFF`.
 On Windows (Visual Studio) use `cmake --build build --config Release`; the exe is in `build/Release`.
